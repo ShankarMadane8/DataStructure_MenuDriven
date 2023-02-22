@@ -58,13 +58,14 @@ public class Menu extends MenuItem {
 			//System.out.println(v.getParent()+" "+v.getParent().getItemName());
 
 		});
-		
+		   System.out.println("6. back");
 		try {
 			System.out.println("Enter choice number:");
 			int menuId = sc.nextInt();
 			//MenuItem menuItem = listmap.get(menuId);
 			//System.out.println(menuItem.getParent().getItemName()+"=====displaymenu");
-			displayMenuItem(menuId);				
+			if(menuId!=6)
+			   displayMenuItem(menuId);				
 		} catch (Exception e) {
 			System.err.println("please Enter valid Choice... ");
 			displayMenu();
@@ -76,7 +77,7 @@ public class Menu extends MenuItem {
 	
 	//---------------------checkBack---------------------------------
 		public void checkBack(MenuItem menuItem) {
-			    System.out.println("check back "+menuItem.getParent());
+			    //System.out.println("check back "+menuItem.getParent());
 				if(menuItem.getParent()!=null) {
 					if(menuItem.getItemName().equals("back")) {
 						 displayMenu();
